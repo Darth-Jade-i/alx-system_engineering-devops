@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # This program prints a string multiple times.
 line=1
-while (( line <= 10 ));
+while (( line < 11 ));
 	do
-		if [ $line == 9 ];
+		if [ $line = 9 ];
 		then
 			echo "Hi"
 		else
