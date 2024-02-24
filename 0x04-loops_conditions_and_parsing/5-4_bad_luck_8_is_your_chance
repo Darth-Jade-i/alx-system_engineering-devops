@@ -3,11 +3,15 @@
 line=1
 while (( line <= 10 ));
 	do
-		echo "Best School";
 
-		if (( line == 9))
+		if (( line == 4 ))
 		then
-			echo "Hi";
+			echo "bad luck";
+		elif (( line == 8))
+		then
+			echo "good luck";
+		else
+			echo "Best School";
 		fi
 
 		((line++))
