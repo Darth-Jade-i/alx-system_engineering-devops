@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 # This program prints a string multiple times.
 line=1
-while (( line < 11 ));
+while (( line <= 10 ));
 	do
-		if [ $line = 9 ];
+		echo "Best School";
+
+		if (( line == 9))
 		then
 			echo "Hi";
-		else
-			echo "Best School";
 		fi
+
 		((line++))
 done
