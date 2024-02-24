@@ -3,11 +3,13 @@
 line=1
 while (( line <= 10 ));
 	do
-		echo "Best School";
+		#echo "Best School";
 
 		if (( line == 9))
 		then
 			echo "Hi";
+		else
+			echo "Best School";
 		fi
 
 		((line++))
