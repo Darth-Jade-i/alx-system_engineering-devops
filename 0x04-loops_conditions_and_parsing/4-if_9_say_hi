@@ -3,7 +3,7 @@
 line=1
 while (( line <= 10 ));
 	do
-		if (( line == 9 ));
+		if [ $line == 9 ];
 		then
 			echo "Hi"
 		else
