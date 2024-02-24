@@ -5,9 +5,9 @@ while (( line < 11 ));
 	do
 		if [ $line = 9 ];
 		then
-			echo "Hi"
+			echo "Hi";
 		else
-			echo "Best School"
+			echo "Best School";
 		fi
 		((line++))
 done
