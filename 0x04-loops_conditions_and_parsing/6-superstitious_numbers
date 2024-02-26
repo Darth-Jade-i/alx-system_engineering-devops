@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This program prints a string multiple times.
+line=1
+
+while (( line <= 20 ))
+do
+	case $counter in
+		4)
+			echo "$counter and then bad luck from China"
+			;;
+		9)
+			echo "$counter and then bad luck from Japan"
+			;;
+		17)
+			echo "$counter and then bad luck from Italy"
+			;;
+		*)
+			echo $counter
+			;;
+	esac
+
+	((line++))
+done
