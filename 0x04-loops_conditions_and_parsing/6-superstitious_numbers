@@ -4,18 +4,18 @@ line=1
 
 while (( line <= 20 ))
 do
-	case $counter in
+	case $line in
 		4)
-			echo "$counter and then bad luck from China"
+			echo "$line and then bad luck from China"
 			;;
 		9)
-			echo "$counter and then bad luck from Japan"
+			echo "$line and then bad luck from Japan"
 			;;
 		17)
-			echo "$counter and then bad luck from Italy"
+			echo "$line and then bad luck from Italy"
 			;;
 		*)
-			echo $counter
+			echo $line
 			;;
 	esac
 
