@@ -6,13 +6,16 @@ while (( line <= 20 ))
 do
 	case $line in
 		4)
-			echo "$line bad luck from China"
+			echo "$line"
+			echo "bad luck from China"
 			;;
 		9)
-			echo "$line bad luck from Japan"
+			echo "$line"
+			echo "bad luck from Japan"
 			;;
 		17)
-			echo "$line bad luck from Italy"
+			echo "$line"
+			echo "bad luck from Italy"
 			;;
 		*)
 			echo $line
