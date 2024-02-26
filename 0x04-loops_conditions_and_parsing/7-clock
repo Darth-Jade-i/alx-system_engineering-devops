@@ -1,23 +1,18 @@
 #!/usr/bin/env bash
 # This program prints a string multiple times.
-minute=1
 
-while (( minute <= 20 ))
+Hour=0
+
+while (( Hour <= 12 ))
 do
-	case $line in
-		4)
-			echo "$line and then bad luck from China"
-			;;
-		9)
-			echo "$line and then bad luck from Japan"
-			;;
-		17)
-			echo "$line and then bad luck from Italy"
-			;;
-		*)
-			echo $line
-			;;
-	esac
+	echo "Hour: $Hour";
 
-	((line++))
+	minute=1
+	while (( minute <= 59))
+	do
+		echo "$minute";
+		((minute++))
+	done
+
+	(( Hour++ ))
 done
