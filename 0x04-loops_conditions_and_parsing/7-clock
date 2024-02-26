@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 # This program prints a string multiple times.
-line=1
+minute=1
 
-while (( line <= 20 ))
+while (( minute <= 20 ))
 do
 	case $line in
 		4)
-			echo "$line bad luck from China"
+			echo "$line and then bad luck from China"
 			;;
 		9)
-			echo "$line bad luck from Japan"
+			echo "$line and then bad luck from Japan"
 			;;
 		17)
-			echo "$line bad luck from Italy"
+			echo "$line and then bad luck from Italy"
 			;;
 		*)
 			echo $line
