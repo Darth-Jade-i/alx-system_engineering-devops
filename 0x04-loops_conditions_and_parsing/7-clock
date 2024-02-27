@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 # This program prints a string multiple times.
-
-Hour=0
-
-while (( Hour <= 12 ))
-do
-	echo "Hour: $Hour";
-
-	minute=1
-	while (( minute <= 59))
+hour=0
+while (( hour <= 12 ));
 	do
-		echo "$minute";
-		((minute++))
-	done
+		echo "Hour: $hour";
 
-	(( Hour++ ))
+		minuite=1
+
+		while (( minuite < 60 ));
+		do
+			echo "$minuite";
+			(( minuite++))
+		done
+
+		((hour++))
 done
