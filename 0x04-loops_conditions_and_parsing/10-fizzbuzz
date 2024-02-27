@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This program executes the fizzbuzz challenge.
+
+number=1
+while (( number <= 100 ));
+	do
+
+		if (( number % 15 == 0 ))
+		then
+			echo "FizzBuzz";
+		elif (( number % 3 == 0 ))
+		then
+			echo "Fizz";
+		elif (( number % 5 == 0 ))
+		then
+			echo "Buzz";
+		else
+			echo $number;
+		fi
+
+		((number++))
+done
