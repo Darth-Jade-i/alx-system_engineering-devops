@@ -6,9 +6,5 @@
 
 for file in *
 do
-	if [[ $file != .* ]]
-	then
-		name_part=$(echo "$file" | cut -d'-' -f2)
-		echo "$name_part"
-	fi
+	echo "$file" | cut -d'-' -f2
 done
