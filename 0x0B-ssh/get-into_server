@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# connects to a server using ssh
+ssh -i ~/.ssh/id_rsa ubuntu@34.204.91.140
