@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# installs nginx on a remote server and configures it
-apt-get -y update
-apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-sudo chown -R $USER:$USER /var/www
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-sudo service nginx start
+# A Bash script that Installs nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
+USER=$(whoami)
+sudo chown "$USER":"$USER" /var/www/html/
+# Create index.html file with "Hello World!"
+sudo echo "Hello World!" > /var/www/html/index.html
+# Restart nginx
+sudo /etc/init.d/nginx restart
