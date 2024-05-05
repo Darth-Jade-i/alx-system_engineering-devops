@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
-# A Bash script that configures Nginx server 
+# A Bash script that configures Nginx server
 # so that /redirect_me is redirecting to another page.
 sudo apt-get -y update
 sudo apt-get -y install nginx
 USER=$(whoami)
+# Give ownership of the html directory to the current user
 sudo chown "$USER":"$USER" /var/www/html/
 # Create index.html file with "Hello World!"
 echo "Hello World!" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
-sudo sed -i '/listen 80 default_server/a  rewrite ^/redirect_me https://www.github.com/Thobeats permanent;' /etc/nginx/sites-available/default
+# Create custom_404.html file with content
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+# Add rewrite rule to Nginx configuration
+sudo sed -i '/listen 80 default_server/a  rewrite ^/redirect_me https://github.com/Darth-Jade-i/Darth-Jade-i.github.io.git permanent;' /etc/nginx/sites-available/default
+# Configure custom 404 page
 sudo sed -i '/listen 80 default_server/a  error_page 404 /custom_404.html;\n location = /custom_404.html\n  {\n  root /var/www/html;\n internal;\n}' /etc/nginx/sites-available/default
+# Restart Nginx service
 sudo service nginx restart
